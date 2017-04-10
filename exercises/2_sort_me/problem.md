@@ -1,9 +1,9 @@
 # Sort Me #
-Sorting a Array or JSON data is sometimes very painfull in Javascript.
+Sorting a Array or JSON data is sometimes very painful in Javascript.
 **Lo-Dash** helps you with that.
 * * *
 ## The Fixer ##
-Let me introduce you the `sortBy` function:
+Let me introduce to you the `sortBy` function:
 ```js
 _.sortBy(collection, [callback=identity])
 ```
@@ -18,8 +18,8 @@ _.sortBy([1, 2, 3], function(num) { return Math.sin(num); });
 // → [3, 1, 2]
 ```
 If `callback` is a function, it will be called as `callback(value, index|key, collection)`.
-Like most of the **Lo-Dash** functions, `sortBy` can also used with the
-"*.pluck*" callback shorthand (http://lodash.com/docs#pluck).
+Like most of the **Lo-Dash** functions, `sortBy` can also be used with the
+"*.map*" callback shorthand (http://lodash.com/docs#map).
 ```js
 var characters = [
   { 'name': 'barney',  'age': 36 },

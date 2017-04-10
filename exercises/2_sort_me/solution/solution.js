@@ -1,14 +1,10 @@
-'use strict';
+const _ = require("lodash");
 
-var _ = require("lodash");
-
-var sorting = function (item) {
-    return _.sortBy(item, function (item) {
-        return -item.quantity;
-    });
+const sorting = function (collection) {
+    return _.sortBy(collection, item => -item.quantity);
 
     /* Also possible:
-     return _.sortBy(item,"quantity").reverse();
+     return _.sortBy(collection,"quantity").reverse();
      */
 };
 

@@ -1,23 +1,13 @@
 #!/usr/bin/env node
 
-'use strict';
+const workshopper = require('workshopper');
+const updateNotifier = require('update-notifier');
+const packageJson = require('./package.json');
 
-var workshopper = require('workshopper'),
-    path        = require('path'),
-    updateNotifier = require('update-notifier'),
-    pkg = require('./package.json');
-
-updateNotifier({packageName: pkg.name, packageVersion: pkg.version}).notify();
-
-function fpath(f) {
-    return path.join(__dirname, f);
-}
+updateNotifier({pkg: packageJson}).notify();
 
 workshopper({
-    name        : 'lololodash',
-    title       : 'Lololodash - learn LoDash',
-    subtitle    : 'Learn Lo-Dash',
-    appDir      : __dirname,
-    menuItems   : [],
-    exerciseDir : fpath('./exercises/')
+    name: 'lololodash',
+    appDir: __dirname,
+    languages: ['en', 'fr', 'ko']
 });

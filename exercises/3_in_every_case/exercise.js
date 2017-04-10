@@ -1,18 +1,15 @@
-'use strict';
+const verify = require("../../lib/verify.js");
 
-var verify = require("../../lib/verify.js"),
-    _ = require("lodash");
-
-var run = {
+const run = {
     json: {
         Hamburg: { population: 1.698 },
         Strasbourg: { population: 0.272 },
-        Rom: { population: 2.753 },
+        Rome: { population: 2.753 },
         Dublin: { population: 0.528 }
     },
     expect: { Hamburg: { population: 1.698, size: 'big' },
         Strasbourg: { population: 0.272, size: 'small' },
-        Rom: { population: 2.753, size: 'big' },
+        Rome: { population: 2.753, size: 'big' },
         Dublin: { population: 0.528, size: 'med' } }
 };
 
